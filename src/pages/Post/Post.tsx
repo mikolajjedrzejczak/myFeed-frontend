@@ -38,7 +38,6 @@ const Post = () => {
   const [postLikes, setPostLikes] = useState<any>([]);
   const [liked, setLiked] = useState<boolean>(false);
   const [editPost, setEditPost] = useState<boolean>(false);
-  const [showLikes, setShowLikes] = useState<boolean>(false);
   const [comments, setComments] = useState<CommentProps[]>([]);
   const [isNewComment, setIsNewComment] = useState<boolean>(false);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -236,7 +235,7 @@ const Post = () => {
                           />
                         )}
                       </motion.div>
-                      <span onClick={() => setShowLikes(true)}>
+                      <span>
                         {postLikes.length}
                       </span>
                     </div>

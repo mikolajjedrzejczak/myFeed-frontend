@@ -1,5 +1,4 @@
 import styles from './Navbar.module.scss';
-import leftBar from '../LeftBar/Leftbar.module.scss';
 import { NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -21,7 +20,7 @@ const Navbar = () => {
   const [search, setSearch] = useState('');
   const [showSearch, setShowSearch] = useState<boolean>(false);
   const { currentUser } = useAuth();
-  const { changeMenu, showMenu } = useMenu();
+  const { changeMenu } = useMenu();
 
   useEffect(() => {
     const fetchUsers = async () => {

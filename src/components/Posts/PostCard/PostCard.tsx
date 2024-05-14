@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { FaHeart, FaRegHeart } from 'react-icons/fa';
-import { BsChat } from 'react-icons/bs';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
@@ -15,7 +14,6 @@ import purify from 'dompurify';
 
 import ShareModal from '../../ShareModal/ShareModal';
 import PostMedia from '../../PostMedia/PostMedia';
-import { CommentProps } from '../../../types/comments';
 import { replaceMessage } from '../../../utils/utlis';
 import { buttonVariants } from '../../../animations/Animations';
 import { ChatBtn } from '../../Icons/ChatBtn';
@@ -34,7 +32,6 @@ const PostCard = ({ post }: any) => {
   const [collapseContent, setCollapseContent] = useState<boolean>(false);
   const [showShare, setShowShare] = useState<boolean>(false);
   const [liked, setLiked] = useState<boolean>(false);
-  const [comments, setComments] = useState<CommentProps[]>([]);
 
   const sendLike = async () => {
     try {
@@ -68,19 +65,7 @@ const PostCard = ({ post }: any) => {
     getLike();
   }, [liked]);
 
-  useEffect(() => {
-    const fetchComments = async () => {
-      try {
-        const { data } = await axios.get(
-          `/api/posts/post/comments/${post?.id}`
-        );
-        setComments(data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    fetchComments();
-  }, []);
+
 
   const handleShare = () => {
     setShowShare(true);

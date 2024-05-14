@@ -17,7 +17,7 @@ interface ShareModalProps {
 const ShareModal = ({ url }: ShareModalProps) => {
   return (
     <div className={styles.shareModal}>
-      <FacebookShareButton url={url} quote="some text" hashtag="#myFeed">
+      <FacebookShareButton url={url} hashtag="#myFeed">
         <FacebookIcon size={25} round />
       </FacebookShareButton>
       <FacebookMessengerShareButton appId="" url={url}>
