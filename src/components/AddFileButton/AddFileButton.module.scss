@@ -1,0 +1,23 @@
+@import "../../global/theme";
+
+.addMedia {
+    cursor: pointer;
+    display: flex;
+    height: fit-content;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    padding: 5px;
+    transition: .1s ease;
+  
+    &:hover {
+      background-color: $gray-3;
+  }
+
+    label {
+        display: flex;
+        cursor: pointer;
+    }
+    input {
+        display: none;
+    }
+}

@@ -1,0 +1,23 @@
+.burger {
+    font-size: 1.5rem;
+    display: none;
+    padding: 0 25px;
+    
+    .burgerIcon {
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 1200px) {
+    .burger {
+        display: flex;
+        padding: 0 60px;
+    }
+ }
+
+@media (max-width: 800px) {
+    .burger {
+        display: flex;
+        padding: 0 25px;
+    }
+}

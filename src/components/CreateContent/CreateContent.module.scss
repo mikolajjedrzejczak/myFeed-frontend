@@ -1,0 +1,81 @@
+@import '../../global/theme';
+
+.createPost {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: $primary;
+    height: fit-content;
+
+    &.border {
+        border: 1px solid $secondary;
+        padding: 15px;
+        border-radius: 5px;
+    }
+
+.top {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    border-bottom: 1px solid $tertiary;
+
+    
+    }  
+    
+
+}
+
+.textLength {
+    color: $tertiary;
+  
+}
+
+.maxLength {
+    color: rgb(228, 102, 102)!important;  
+}
+
+.options {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+
+    .addMedia {
+        label {
+            display: flex;
+            cursor: pointer;
+        }
+        input {
+            display: none;
+        }
+    }
+
+    .submitPost {
+        width: 100px;
+        border: none;
+        background-color: $tertiary;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: .3s ease;
+     
+        &:hover {
+            background-color: $tertiaryHover;
+        }
+
+        &:disabled {
+            background-color: $secondary;
+            cursor:not-allowed;
+        }
+    }
+}
+
+
+
+@media (max-width: 800px) {
+    .createPost {
+        padding: 10px!important;
+    }
+}

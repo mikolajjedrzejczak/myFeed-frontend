@@ -1,0 +1,20 @@
+@import "../../global/theme";
+
+.submitButton {
+    width: 100px;
+    border: none;
+    background-color: $tertiary;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s ease;
+ 
+    &:hover {
+        background-color: $tertiaryHover;
+    }
+
+    &:disabled {
+        background-color: $secondary;
+        cursor:not-allowed;
+    }
+}

@@ -1,0 +1,19 @@
+.settingsLayout {
+    position: absolute;
+    top: 67px;
+    left: 80px;
+    height: calc(100vh - 67px);
+    width: calc(100vw - 80px);
+    display: flex;
+    background-color: inherit;
+    color: #fff;
+}
+
+
+@media screen and (max-width: 1250px) {
+    .settingsLayout {
+      left: 0;
+      width: 100%;
+    }
+  }
+  
