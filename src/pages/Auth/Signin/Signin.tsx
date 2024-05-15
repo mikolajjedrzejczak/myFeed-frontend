@@ -57,7 +57,7 @@ const Signin = () => {
         <p>
           <span>Test Account:</span>
           <br />
-          email: admin@gmail.com <br /> password: Admin123
+          email: admin@myfeed.com <br /> password: admin
         </p>
         <h2>Sign In</h2>
 
