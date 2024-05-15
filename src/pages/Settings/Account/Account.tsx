@@ -11,7 +11,7 @@ const Account = () => {
   const { setCurrentUser, currentUser } = useAuth();
 
   const deleteAccount = async () => {
-    if (currentUser?.email === 'admin@gmail.com') {
+    if (currentUser?.email === 'admin@myfeed.com') {
       window.alert("You can't delete Admin account!");
       return;
     }
