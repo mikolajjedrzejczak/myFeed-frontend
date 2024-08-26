@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://api.devdomain.site',
+        target: 'https://api.test-domain.ovh',
         changeOrigin: true,
         secure: false,
       },
