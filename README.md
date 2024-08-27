@@ -1,4 +1,4 @@
-www.test-domain.ovh
+test-domain.ovh
 
 # React + TypeScript + Vite
 
