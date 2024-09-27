@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://api.test-domain.ovh',
+        target: 'http://13.40.130.1:80',
         changeOrigin: true,
         secure: false,
       },
